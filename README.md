@@ -59,3 +59,8 @@ This is a simple calculator suppiorting featuers blelow.
 >
 > Invalid Input
 
+# Updating in the process
+1. Data structure and Algorithm
+2. Handling errors
+3. Unit Test
+4. Another case e.g. ')1+2{' 
