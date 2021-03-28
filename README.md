@@ -1,19 +1,16 @@
 # Calculator
 
-This is a simple calculator suppiorting featuers blelow.
+This is a calculator I developed depending on a guideline of VidMob Engineering Take Home Exercise.
 
-- Take text or string as input
-- Support positive, negative, and decimal numbers
-- Support +, -, *, and / operations
-- Support parentheses
 
-# How to use
 
-## Requirement
+## How to use
+
+### Requirement
 
 - Python 3.x should be installed
 
-## Run the program
+### Run the program
 
 1. Store all files in calculator.zip at the same location
 
@@ -29,7 +26,35 @@ This is a simple calculator suppiorting featuers blelow.
 
 5. Get a calculated value; an error might happen through an input validation
 
-# Test
+## Requirements to develop
+
+- (clear) Take text or string as input
+- (clear) Support positive, negative, and decimal numbers
+- (clear) Support +, -, *, and / operations
+- (clear) Support parentheses
+- (clear) A bit of documentation or help text for how to use this program
+
+## How to solve
+
+- Infix -> Postfix
+
+  > Infix Expression: A + B * C + D
+  >
+  > Postfix Expression: A B C * + D +
+  >
+  > Ways to do
+  >
+  > 1. Prioritize operators
+  >
+  > 2. Suppose parenthesis exists according to the priority of operators
+  >
+  > 3. Move operatros back after ")"
+  >
+  > 4. Remove parenthesis
+  >
+  >    e.g. A + B * C -> (A + ( B * C ) -> A B C * +
+
+## Test
 
 > \> 1 + 2
 >
@@ -59,8 +84,9 @@ This is a simple calculator suppiorting featuers blelow.
 >
 > Invalid Input
 
-# Updating in the process
-1. Data structure and Algorithm
-2. Handling errors
-3. Unit Test
-4. Another case e.g. ')1+2{' 
+## Updating
+
+- "Stack" class will be added
+- Variable names are edited to be intuitive and readable
+- Unittest will be implented
+- Handle various errors
