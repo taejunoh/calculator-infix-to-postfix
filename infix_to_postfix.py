@@ -1,3 +1,4 @@
+from Stack import Stack
 """
 Turn a tokenized infix expression into a postfix expression
 """
@@ -13,7 +14,7 @@ def inf_to_post(tokens):
         '(': 1
     }
 
-    op_stack = []
+    op_stack = Stack()
     post_list = []
 
     for token in tokens:
@@ -23,12 +24,12 @@ def inf_to_post(tokens):
 
         # "(" into an operator stack
         elif token == '(':
-            op_stack.append(token)
+            op_stack.push(token)
 
         # ")", remove parenthesis not added to the postfix list
         elif token == ')':
             # pop from the operator stack until "("
-            while op_stack[-1] != '(':
+            while op_stack.peak() != '(':
                 post_list.append(op_stack.pop())
 
             op_stack.pop()
@@ -37,20 +38,20 @@ def inf_to_post(tokens):
         else:
             # add to the operator stack if empty
             if not op_stack:
-                op_stack.append(token)
+                op_stack.push(token)
 
             # the operator stack if not empty
             else:
 
                 while len(op_stack) > 0:
                     # precedance in the operator stack is higher
-                    if prec[op_stack[-1]] >= prec[token]:
+                    if prec[op_stack.peak()] >= prec[token]:
                         # add to the postfix list
                         post_list.append(op_stack.pop())
                     else:
                         break
 
-                op_stack.append(token)
+                op_stack.push(token)
 
     # Add remains in the operator stack into the postfix list
     while op_stack:

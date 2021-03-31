@@ -86,7 +86,7 @@ This is a calculator I developed depending on a guideline of VidMob Engineering 
 
 ## Updating
 
-- "Stack" class will be added
+- (clear) "Stack" class will be added and replaced existed stacks
 - Variable names are edited to be intuitive and readable
 - Unittest will be implented
 - Handle various errors
