@@ -1,8 +1,7 @@
-from input_validation import check_input
-from tokenize_infix import split_tokens
-from infix_to_postfix import inf_to_post
-from evaluate_postfix import eval_post
-
+from inputValidation import checkInput
+from tokenizeInfix import splitTokens
+from infixToPostfix import infToPost
+from evaluatePostfix import evalPost
 
 def calculate():
     # Take text or string as input
@@ -14,16 +13,16 @@ def calculate():
             break
         else:
             # Input validation
-            check_input(string_expression)
+            checkInput(string_expression)
 
             # Tokenize infix expression
-            tokens = split_tokens(string_expression)
+            tokens = splitTokens(string_expression)
 
             # Turn infix to postfix
-            postfix = inf_to_post(tokens)
+            postfix = infToPost(tokens)
 
             # Evaluate postfix
-            result = eval_post(postfix)
+            result = evalPost(postfix)
 
             # Get a result
             print(result)

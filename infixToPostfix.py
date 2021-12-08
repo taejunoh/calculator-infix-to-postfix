@@ -4,7 +4,7 @@ Turn a tokenized infix expression into a postfix expression
 """
 
 
-def inf_to_post(tokens):
+def infToPost(tokens):
     # Precedence of operators
     prec = {
         '*': 3,

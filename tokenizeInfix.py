@@ -3,7 +3,7 @@ Turn an infix expression as input into tokens in a list
 """
 
 
-def split_tokens(string_expression):
+def splitTokens(string_expression):
     # Remove whitespace
     str_expr = string_expression.replace(' ', '')
 

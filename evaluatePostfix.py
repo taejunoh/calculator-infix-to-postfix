@@ -5,7 +5,7 @@ Evaluate the postfix expression and get a result of the initial equation
 """
 
 
-def eval_post(post_list):
+def evalPost(post_list):
     val_stack = Stack()
 
     for post in post_list:

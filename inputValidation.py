@@ -1,7 +1,7 @@
 from sys import exit
 
 
-def check_input(string_expression):
+def checkInput(string_expression):
     """
     Syntax errors on a calculator
     1. An open bracket without closing parenthesis
